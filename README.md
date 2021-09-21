@@ -14,7 +14,7 @@ All CSS and JS required are under the static folder. The main HTML file index.ht
 
 ## Deployed Dashboard can be viewed here : [Belly Button Diversity Dashboard](https://mriganv.github.io/Plotly-Challenge/) 
 
-## Step 1: Plotly
+## Plotly
 
 The following plots are included in the dashboard using the Plotly.js framework:
 
