@@ -22,7 +22,7 @@ The following plots are included in the dashboard using the Plotly.js framework:
 
 * Used `otu_labels` as the hovertext for the chart.
 
-  ![bar Chart](/Images/Bar Graph - Top 10 Otu_Ids.png)
+![Bar Graph - Top 10 Otu_Ids](https://user-images.githubusercontent.com/81407869/134235956-27d54cc1-3e48-4d41-893a-696fbf135405.png)
 
 3. Created a bubble chart that displays each sample.
 
@@ -36,27 +36,27 @@ The following plots are included in the dashboard using the Plotly.js framework:
 
 * Used `otu_labels` for the text values.
 
-![Bubble Chart](/Images/Bubble Chart.png)
+![Bubble Chart](https://user-images.githubusercontent.com/81407869/134236013-255fa55e-aa84-4fb9-9d6a-a7d05d008f22.png)
+
 
 * Created  a Gauge Chart  to plot the weekly washing frequency of the individual for the gauge values ranging from 0 to 9. 
 
 * Updates the chart whenever a new sample is selected.
 
-![Weekly Washing Frequency Gauge](/Images/Gauge Chart.png)
-
-
+![Gauge Chart](https://user-images.githubusercontent.com/81407869/134236044-41c51518-fb1d-414b-9338-654805abd8d6.png)
 
 4. Displayed the sample metadata, i.e., an individual's demographic information.
 
 5. Displayed each key-value pair from the metadata JSON object on the page.
 
- ![Demographics Info](/Images/Demographic Info.jpb)
+ ![Demogr![Demographic Info](https://user-images.githubusercontent.com/81407869/134236130-e1f5c1cc-044d-4d9e-a2ca-6c00d9d5e583.jpg)
+
 
 6. Updates all of the plots every time a new sample is selected.
 
 Additionally, created layout that you would like for your dashboard. 
 
-![Dashboard](/Images/Dashboard.png)
+![Dashboard](https://user-images.githubusercontent.com/81407869/134236167-a49f0c2d-3d8a-45bb-9c71-6a4938569f75.jpg)
 
 
 ## Deployment
@@ -64,23 +64,8 @@ Additionally, created layout that you would like for your dashboard.
 * The dashboard can be viewed here: ![Belly Button Diversity Dashboard](/Images/Dashboard.png) 
 
 
-
-## Hints
-
-* Use `console.log` inside of your JavaScript code to see what your data looks like at each step.
-
-* Refer to the [Plotly.js documentation](https://plot.ly/javascript/) when building the plots.
-
-## Rubric
-
-[Unit 14 Rubric - Plot.ly Homework - Belly Button Biodiversity](https://docs.google.com/document/d/1wD_hOEJELD2hifTaECfx66xlpEdJeYm3mL8q2Zoq1vo/edit?usp=sharing)
-
-- - -
-
 ## References
 
 Hulcr, J. et al.(2012) _A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable_. Retrieved from: [http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/)
 
-- - -
 
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
