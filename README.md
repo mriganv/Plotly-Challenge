@@ -7,6 +7,10 @@ In this assignment, an interactive dashboard was built to explore the [Belly But
 
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
 
+Demographics information is dynamically populated based upon a user-selected test subject ID. A bar chart, bubble chart and a bonus gauge chart also update once the ID is changed. Code has been written using Plotly, JavaScript, HTML, CSS, and D3.js.
+
+All CSS and JS required are under the static folder. The main HTML file index.html and images are in the root folder of the Github repo.
+
 
 ## Deployed Dashboard can be viewed here : [Belly Button Diversity Dashboard](https://mriganv.github.io/Plotly-Challenge/) 
 
