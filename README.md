@@ -9,8 +9,8 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 ## Deployment
 
-* The dashboard can be viewed here: ![Belly Button Diversity Dashboard](https://mriganv.github.io/Plotly-Challenge/) 
-*
+## Deployed Dashboard : ![Belly Button Diversity Dashboard](https://mriganv.github.io/Plotly-Challenge/) 
+
 ## Step 1: Plotly
 
 The following plots are included in the dashboard using the Plotly.js framework:
