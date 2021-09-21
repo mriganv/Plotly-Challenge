@@ -1,0 +1,32 @@
+
+.jumbo-bg{
+    background: url('https://wallup.net/wp-content/uploads/2015/12/134353-abstract-748x421.jpg') no-repeat center;
+    background-size: cover;
+}
+body{
+    background-color: rgba(223, 199, 192, 0.233);
+}
+.well{
+    border-color: rgb(27, 26, 27);
+    border-width: 1px;
+    background-color: rgb(243, 220, 220);
+    
+}
+
+.col-md-5{
+margin-bottom: 20px;
+}
+
+h5{ 
+    font-size: 18px;
+    font-weight: bold;
+    color:rgb(34,94,168) }
+
+.panel-title{
+    font-size: 18px;
+    font-weight:bold;
+    color:rgb(34,94,168);
+    
+    
+
+}
