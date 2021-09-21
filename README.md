@@ -49,7 +49,7 @@ The following plots are included in the dashboard using the Plotly.js framework:
 
 5. Displayed each key-value pair from the metadata JSON object on the page.
 
- ![Demogr![Demographic Info](https://user-images.githubusercontent.com/81407869/134236130-e1f5c1cc-044d-4d9e-a2ca-6c00d9d5e583.jpg)
+ ![Demographic Info](https://user-images.githubusercontent.com/81407869/134236130-e1f5c1cc-044d-4d9e-a2ca-6c00d9d5e583.jpg)
 
 
 6. Updates all of the plots every time a new sample is selected.
