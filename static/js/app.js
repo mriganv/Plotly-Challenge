@@ -93,13 +93,17 @@ function Charts(selection) {
 
         var washFreq = wash.wfreq;
 
-        // Layout for Bubble Chart
+    // --------------------------
+    // Layout for Bubble Chart
+    //---------------------------
         var LayoutBubble = {
         xaxis: { title: "OTU ID"},
         hovermode: "closest",
         };
         
-        // Data for Bubble Chart
+    // --------------------------
+    // Data for Bubble Chart
+    //---------------------------
         var DataBubble = [ 
         {
         x: otu_Ids,
@@ -143,7 +147,11 @@ function Charts(selection) {
         let labels = otu_ids1.map(item => "OTU"+ " " + item)
     
         
+    
+    
+    // --------------------------
     // Data for bar Chart
+    //---------------------------
     let tracebar = [{
 
         x: sample_values1, 
@@ -157,7 +165,10 @@ function Charts(selection) {
         
     }] 
 
+    // ---------------------------
     // layout for bar Chart
+    // ---------------------------
+
     let layoutbar = {
     title: {
             text: `<b>Top 10 OTUs</b>`,
@@ -177,61 +188,92 @@ function Charts(selection) {
     // I see a lot of Wash Frequencies with null values
     // Assigning them to zero, as it will be easy to display in the chart with the indicator pointing to Zero
     if (washFreq == null) {
-            washFreq = 0;
-        }
-    // Data for Gauge chart
-    var data = [
-    {
-        domain: { x: [0, 1], y: [0, 1] },
-        value: washFreq,
-        title: { text: `<b>Belly Button Washing Frequency</b><br><br>Scrubs per Week`,  font: {
-                    size: 18,
-                    color: 'rgb(34,94,168)'
-                },},
-        type: "indicator",
-        mode: "gauge+number+delta",
-        gauge: {
-            bar: {'color': "rgb(34,94,168)"}, 
-            bgcolor: "white",
-            borderwidth: 1,
-            bordercolor: "rgb(46,0,0)",
-            axis: { range: [0, 9],   tickmode: 'linear', 
-                    tickfont: {
-                        size: 15
-                    }},
-            steps: [
-                        { range: [0, 1], color: "#fbf2f2" },
-                        { range: [1, 2], color: "#f2d9d9"  },
-                        { range: [2, 3], color: "#e9c0c0" },
-                        { range: [3, 4], color: "#e0a7a7" },
-                        { range: [4, 5], color: "#d78e8e" },
-                        { range: [5, 6], color: "#cf7474" },
-                        { range: [6, 7], color: "#c65b5b" },
-                        { range: [7, 8], color: "#bd4242" },
-                        { range: [8, 9], color: "#a43939"},
-                        
-        ],
-        }
+                    washFreq = 0;
+
+                }
+    // find an angle for each washfrequency portion on the chart
+    var angle = (washFreq / 9) * 180;
+
+    // Trig to calc meter point
+    var degrees = 180 - angle,
+        radius = .5;
+    var radians = degrees * Math.PI / 180;
+    var x = radius * Math.cos(radians);
+    var y = radius * Math.sin(radians);
+
+    // Path: may have to change to create a better triangle
+    var mainPath = 'M -.0 -0.025 L .0 0.025 L ',
+        pathX = String(x),
+        space = ' ',
+        pathY = String(y),
+        pathEnd = ' Z';
+    var path = mainPath.concat(pathX,space,pathY,pathEnd);
+
+    // --------------------------
+    // data for the Gauge chart
+    //---------------------------
+    var data = [{ type: 'scatter',
+        x: [0], y:[0],
+        marker: {size: 35, color:'rgb(34,94,168)'},
+        showlegend: false,
+        name: 'speed',
+        text: angle,
+        hoverinfo: 'text+name'},
+    { values: [100/9,100/9,100/9,100/9,100/9,100/9,100/9,100/9,100/9, 100],
+        rotation: 90,
+        text: ['8-9', '7-8', '6-7', '5-6',
+                    '4-5', '3-4', '2-3', '1-2','0-1', ''],
+        textinfo: 'text',
+        textposition:'inside',
+        marker: {colors:[ "#bd4242", 
+            "#cf7474","#c65b5b" ,"#cf7474" ,"#d78e8e" ,"#e0a7a7", "#e9c0c0","#f2d9d9" ,"#fbf2f2", "white"]},
+        labels: ['8-9', '7-8', '6-7', '5-6',
+                    '4-5', '3-4', '2-3', '1-2', '0-1',''],
+        hoverinfo: 'label',
+        hole: .5,
+        type: 'pie',
+        showlegend: false,
+        hole: 0.5,
     }];
-        // Layout for Gauge Chart
-        var layout = { width: 600, height: 450, margin: { t: 0, b: 0 } };
 
-        // Plotting Gauge Chart
-        Plotly.newPlot('gauge', data, layout);
+    // --------------------------
+    // layout for Gauge chart
+    //---------------------------
+    var layout = {
+        shapes:[{
+            type: 'path',
+            path: path,
+            fillcolor: 'rgb(34,94,168)',
+            line: {
+                color: 'rgb(34,94,168)', 
+                linewidth: 5
+            }
+            }],
+        title: { text: `<b>Belly Button Washing Frequency</b><br>Scrubs per Week`,  font: {
+                        size: 18,
+                        color: 'rgb(34,94,168)'}
+                    },
+        height: 500,
+        width: 500,
+        xaxis: {zeroline:false, showticklabels:false,
+                showgrid: false, range: [-1, 1]},
+        yaxis: {zeroline:false, showticklabels:false,
+                showgrid: false, range: [-1, 1]}
+    };
 
-    });
+    Plotly.newPlot('gauge', data, layout, {responsive: true});
 
-}
+        })
+    }
+    //  #################################   // 
+        // Plots for new samples 
+    //  #################################  // 
 
-//  #################################   // 
-    // Plots for new samples 
-//  #################################  // 
+    function optionChanged(newData) {
 
-function optionChanged(newData) {
-
-    metadataSample(newData);
-    Charts(newData);
-}
+        metadataSample(newData);
+        Charts(newData);
+    }
 
 init();
 
