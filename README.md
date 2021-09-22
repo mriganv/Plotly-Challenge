@@ -12,7 +12,7 @@ Demographics information is dynamically populated based upon a user-selected tes
 All CSS and JS required are under the static folder. The main HTML file index.html and images are in the root folder of the Github repo.
 
 
-## Deployed Dashboard can be viewed here : [Belly Button Diversity Dashboard](https://mriganv.github.io/Plotly-Challenge/) 
+### Deployed Dashboard can be viewed here : [Belly Button Diversity Dashboard](https://mriganv.github.io/Plotly-Challenge/) 
 
 ## Plotly
 
