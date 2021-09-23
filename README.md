@@ -12,7 +12,7 @@ Demographics information is dynamically populated based upon a user-selected tes
 All CSS and JS required are under the static folder. The main HTML file index.html and images are in the root folder of the Github repo.
 
 
-## Deployed Dashboard can be viewed here : [Belly Button Diversity Dashboard](https://mriganv.github.io/Plotly-Challenge/) 
+### Deployed Dashboard can be viewed here : [Belly Button Diversity Dashboard](https://mriganv.github.io/Plotly-Challenge/) 
 
 ## Plotly
 
@@ -48,8 +48,10 @@ The following plots are included in the dashboard using the Plotly.js framework:
 * Created  a Gauge Chart  to plot the weekly washing frequency of the individual for the gauge values ranging from 0 to 9. 
 
 * Updates the chart whenever a new sample is selected.
+* 
+![Gauge Chart](https://user-images.githubusercontent.com/81407869/134287228-deb43c88-0be6-4930-9702-42669da2f519.jpg)
 
-![Gauge Chart](https://user-images.githubusercontent.com/81407869/134236044-41c51518-fb1d-414b-9338-654805abd8d6.png)
+
 
 4. Displayed the sample metadata, i.e., an individual's demographic information.
 
@@ -62,11 +64,7 @@ The following plots are included in the dashboard using the Plotly.js framework:
 
 Additionally, created layout that you would like for your dashboard. 
 
-![Dashboard](https://user-images.githubusercontent.com/81407869/134236167-a49f0c2d-3d8a-45bb-9c71-6a4938569f75.jpg)
-
-
-
-
+![Dashboard](https://user-images.githubusercontent.com/81407869/134287321-c0c11f8a-6919-4a1d-8416-1639078bf6e7.png)
 
 ## References
 
