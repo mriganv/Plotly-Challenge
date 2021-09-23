@@ -48,10 +48,8 @@ The following plots are included in the dashboard using the Plotly.js framework:
 * Created  a Gauge Chart  to plot the weekly washing frequency of the individual for the gauge values ranging from 0 to 9. 
 
 * Updates the chart whenever a new sample is selected.
-* 
-![Gauge Chart](https://user-images.githubusercontent.com/81407869/134287228-deb43c88-0be6-4930-9702-42669da2f519.jpg)
-
-
+ 
+![Gauge Chart](https://user-images.githubusercontent.com/81407869/134561928-310374e7-6067-4ca1-9b06-f5e6ca1d3f55.png)
 
 4. Displayed the sample metadata, i.e., an individual's demographic information.
 
